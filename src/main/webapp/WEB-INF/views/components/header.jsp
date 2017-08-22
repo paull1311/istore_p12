@@ -20,6 +20,11 @@
                 <button>Админпанель</button>
             </a>
         </sec:authorize>
+        <sec:authorize url="/orders">
+            <a href="<c:url value="/orders"/>" style="float: right">
+                <button>Мои заказы</button>
+            </a>
+        </sec:authorize>
         <b style="float: right">Добро пожаловать, ${loggedUser.name} </b>
     </sec:authorize>
     <sec:authorize access="isAnonymous()">
